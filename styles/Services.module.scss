@@ -1,0 +1,87 @@
+.threeSections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 300vh;
+
+    scroll-behavior: smooth;
+
+    background: grey;
+
+
+    & section {
+        width: 100%;
+        background: lightgrey;
+        text-align: center;
+        height: 100vh;
+        padding: 3rem 0;
+        padding-top: 10vh;
+
+    }
+}
+
+nav.menuSpacer {
+    min-height: 10vh;
+    z-index: 2000;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    color: #fff;
+    background-color: grey;
+
+    & a {
+        padding: 0 2rem;
+
+        &:hover {
+            font-weight: bold;
+        }
+
+        &:active { 
+            color: red;
+        }
+    }    
+}
+
+.menuActive {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    & a {
+        padding: 0 2rem;
+
+        &:hover {
+            font-weight: bold;
+        }
+
+        &:active { 
+            color: red;
+        }
+    }    
+}
+
+.sectionActive {
+    color: pink;
+    font-weight: bold
+}

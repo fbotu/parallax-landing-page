@@ -1,0 +1,20 @@
+<!-- Install Next JS -->
+npx create-next-app@latest
+<!-- Enter app name -->
+cd parallax-landing-page
+npm run dev
+
+<!-- GIT -->
+echo "# parallax-landing-page" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git branch -M master
+  git remote add origin https://github.com/fbotu/parallax-landing-page.git
+  git push -u origin master
+
+<!-- Addons -->
+npm install -g sass
+npm install --save styled-components
+npm install react-icons --save
+

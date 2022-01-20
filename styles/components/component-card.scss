@@ -1,0 +1,39 @@
+* {
+    --primary: #800020;
+    --secondary: #F7E3D6;
+    --text: black;
+    --link: #800020;
+    --red: #B3002D;
+    --green: #008060;
+    --blue: #142740;
+    --purple: #451F38;
+    --cream: #D9AE91;
+    --grey: #dee2e6;
+}
+
+.card {
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.2);
+    background-color: #fff;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    margin: 0;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.card-img {
+    color: var(--blue);
+    font-size: 4rem;
+}
+
+.card-text li {
+    list-style: none;
+    padding-bottom: 0.5rem;
+    margin-left: -2rem;
+    color: var(--text)
+}
