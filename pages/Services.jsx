@@ -5,8 +5,8 @@ import styles from '../styles/Services.module.scss'
 
 function Services() {
 
-    const [offsetY, setOffsetY] = useState(0);
-    const handleScroll = () => setOffsetY(window.pageYOffset);
+    // const [offsetY, setOffsetY] = useState(0);
+    // const handleScroll = () => setOffsetY(window.pageYOffset);
 
     const [navbar, setNavbar = false] = useState(false);
 
@@ -17,7 +17,7 @@ function Services() {
     return () => removeEventListener('scroll', action)
     }, []);
 
-    Listener(handleScroll)
+    // Listener(handleScroll)
 
     /* MENU ITEM ACTIVE */
     const [menuItem1Active, setMenuItem1Active] = useState(false);
@@ -27,39 +27,26 @@ function Services() {
     const IfSt = (condition, action) => {
         condition ? action(true) : action(false);
     }  
-    
+
+/* Section 1 */
     const changeMenuItem1 = () => {IfSt(
         window.pageYOffset > 10 && window.pageYOffset < 900,
         setMenuItem1Active
         )}
-/* Section 1 */
-    // const changeMenuItem1 = () => {
-    //     if (window.pageYOffset > 10 && window.pageYOffset < 900) {
-    //         setMenuItem1Active(true);
-    //     } else {
-    //         setMenuItem1Active(false);
-    //     }
-    // }
     Listener(changeMenuItem1);
   
 /* Section 2 */
-    const changeMenuItem2 = () => {
-        if (window.pageYOffset > 900 && window.pageYOffset < 1800) {
-            setMenuItem2Active(true);
-        } else {
-            setMenuItem2Active(false);
-        }
-    }
+    const changeMenuItem2 = () => {IfSt(
+        window.pageYOffset > 900 && window.pageYOffset < 1800,
+        setMenuItem2Active
+        )}
     Listener(changeMenuItem2);
     
 /* Section 3 */
-    const changeMenuItem3 = () => {
-        if (window.pageYOffset > 1800) {
-            setMenuItem3Active(true);
-        } else {
-            setMenuItem3Active(false);
-        }
-    }
+    const changeMenuItem3 = () => {IfSt(
+        window.pageYOffset > 1800,
+        setMenuItem3Active
+        )}
     Listener(changeMenuItem3);
  
 /* Set Navbar Class */
@@ -72,12 +59,12 @@ function Services() {
     }
     Listener(changeNavbar);
 
-/* Console Logs */
-    console.log("Section 1 " + menuItem1Active);
-    console.log("Section 2 " + menuItem2Active);
-    console.log("Section 3 " + menuItem3Active);
+// /* Console Logs */
+//     console.log("Section 1 " + menuItem1Active);
+//     console.log("Section 2 " + menuItem2Active);
+//     console.log("Section 3 " + menuItem3Active);
 
-    console.log("Y Offset = " + offsetY);
+//     console.log("Y Offset = " + offsetY);
      
   return <div className={styles.threeSections}>
            
