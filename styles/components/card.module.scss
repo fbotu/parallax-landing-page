@@ -1,0 +1,42 @@
+.card {
+    display: block;
+    width: 25%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3); 
+    margin: 2rem;
+    padding: 0;
+
+    // & div {
+    //     margin: 0;
+    //     padding: 0;
+    // }
+}
+
+.cardHeader,
+.cardFooter {
+    margin: 0;
+    padding: 0.5rem;
+    height: 100%;
+    // background-color: rgba(0,0,0,0.1);
+}
+
+.cardImage {
+    height: 100%;
+    width: 100%;
+
+    & img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        margin: -5px 0;
+
+    }
+}
+
+.cardBody {
+    height: 100%;
+    background-color: white;
+    text-align: left;
+    padding: 0.5rem 1rem;
+
+}

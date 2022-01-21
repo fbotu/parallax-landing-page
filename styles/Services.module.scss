@@ -16,7 +16,7 @@
         background: lightgrey;
         text-align: center;
         height: 100vh;
-        padding: 3rem 0;
+        padding: 3rem 3rem;
         padding-top: 10vh;
 
     }
@@ -84,4 +84,18 @@ nav.menuSpacer {
 .sectionActive {
     color: pink;
     font-weight: bold
+}
+
+.one,
+.two,
+.three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+
+    & h1 {
+        display: block;
+        width: 100%;
+    }
 }

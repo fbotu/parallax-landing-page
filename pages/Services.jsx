@@ -1,14 +1,10 @@
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import { Card } from '../components/Card';
 /* STYLES */
 import styles from '../styles/Services.module.scss'
 
 function Services() {
-
-    // const [offsetY, setOffsetY] = useState(0);
-    // const handleScroll = () => setOffsetY(window.pageYOffset);
-
-    const [navbar, setNavbar = false] = useState(false);
 
     const Listener = (action) =>
     useEffect(() => {
@@ -17,16 +13,17 @@ function Services() {
     return () => removeEventListener('scroll', action)
     }, []);
 
-    // Listener(handleScroll)
-
-    /* MENU ITEM ACTIVE */
-    const [menuItem1Active, setMenuItem1Active] = useState(false);
-    const [menuItem2Active, setMenuItem2Active] = useState(false);
-    const [menuItem3Active, setMenuItem3Active] = useState(false);
-
     const IfSt = (condition, action) => {
         condition ? action(true) : action(false);
     }  
+
+    const [navbar, setNavbar = false] = useState(false);
+
+
+/* MENU ITEM ACTIVE */
+    const [menuItem1Active, setMenuItem1Active] = useState(false);
+    const [menuItem2Active, setMenuItem2Active] = useState(false);
+    const [menuItem3Active, setMenuItem3Active] = useState(false);
 
 /* Section 1 */
     const changeMenuItem1 = () => {IfSt(
@@ -65,8 +62,8 @@ function Services() {
 //     console.log("Section 3 " + menuItem3Active);
 
 //     console.log("Y Offset = " + offsetY);
-     
-  return <div className={styles.threeSections}>
+    return (
+        <div className={styles.threeSections}>
            
             <nav className={navbar ? styles.menuActive : styles.menu }>
                 <Link href="/Services/#one" >
@@ -84,26 +81,43 @@ function Services() {
                         Goto Section 3
                     </a>   
                 </Link>
-
             </nav>
-            <section className={styles.one} id="one">
+
+            <section id="one">
                 <h1>
                     Section 1
-                </h1>
+                </h1> 
+                <div className={styles.one}>
+                    <Card 
+                        header="Card Header"
+                        src="https://res.cloudinary.com/fbwebdev/image/upload/v1642269322/Pheori/Images/sound-design_l8uszj.webp"
+                        alt="card image"
+                        title="Card Title"
+                        text="This card has some text"
+                        footer="Card Footer"
+                    />  
+                </div>
             </section>
-            <section className={styles.two} id="two">
+            <section id="two">
                 <h1>
                     Section 2
-                </h1>
+                </h1>   
+                <div className={styles.two}>
+                    <Link href="/Posts">
+                        <a>See our <b>POST ARCHIVE</b></a>
+                    </Link>
+                </div>
             </section>
-            <section className={styles.three} id="three">
+            <section id="three">
                 <h1>
                     Section 3
                 </h1>
+                <div className={styles.three}>
+                    
+                </div>
             </section>
       
-        </div>;
-        
+        </div>);        
 }
 
 export default Services;
