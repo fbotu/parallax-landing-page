@@ -96,6 +96,22 @@ function Services() {
                         text="This card has some text"
                         footer="Card Footer"
                     />  
+                    <Card 
+                        header="Card Header"
+                        src="https://res.cloudinary.com/fbwebdev/image/upload/v1642269322/Pheori/Images/sound-design_l8uszj.webp"
+                        alt="card image"
+                        title="Card Title"
+                        text="This card has some text"
+                        footer="Card Footer"
+                    /> 
+                    <Card 
+                        header="Card Header"
+                        src="https://res.cloudinary.com/fbwebdev/image/upload/v1642269322/Pheori/Images/sound-design_l8uszj.webp"
+                        alt="card image"
+                        title="Card Title"
+                        text="This card has some text"
+                        footer="Card Footer"
+                    /> 
                 </div>
             </section>
             <section id="two">
