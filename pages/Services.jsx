@@ -4,7 +4,7 @@ import { Card } from '../components/Card';
 /* STYLES */
 import styles from '../styles/Services.module.scss'
 /* POSTS */
-// import Post from './Post'
+import Post from './Post'
 
 function Services() {
 
@@ -121,7 +121,9 @@ function Services() {
                     Section 2
                 </h1>   
                 <div className={styles.two}>
-                  
+                    <Link href="/Post">
+                        <a>See our database</a>
+                    </Link>
                 </div>
             </section>
             <section id="three">
