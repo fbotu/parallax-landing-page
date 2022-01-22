@@ -103,9 +103,7 @@ function Services() {
                     Section 2
                 </h1>   
                 <div className={styles.two}>
-                    <Link href="/Posts">
-                        <a>See our <b>POST ARCHIVE</b></a>
-                    </Link>
+                  
                 </div>
             </section>
             <section id="three">
