@@ -1,0 +1,23 @@
+@use '../styles/variables.module';
+
+.pageWrapper {
+    @extend %flex-box;
+    padding: 2rem 5rem;
+}
+
+.title {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.postList {
+    width: 100%;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    list-style: none;
+
+    & a {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
