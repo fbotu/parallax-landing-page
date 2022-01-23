@@ -21,7 +21,7 @@ export default function Postmain(props) {
     <>
       {posts &&
         posts.map((post) => (
-          <article>
+          <article key={post.title}>
             <h3 className="text-lg"> {post.title} </h3>
             <p className="mt-3">{post.excerpt}</p>
           </article>
