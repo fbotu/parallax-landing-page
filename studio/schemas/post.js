@@ -40,13 +40,13 @@ export default {
       type: "blockContent",
       validation: Rule => Rule.required()
     },
-    // {
-    //   name: "author",
-    //   title: "Author",
-    //   type: "reference",
-    //   to: { type: "author" },
-    //   validation: Rule => Rule.required()
-    // },
+    {
+      name: "author",
+      title: "Author",
+      type: "reference",
+      to: { type: "author" },
+      validation: Rule => Rule.required()
+    },
     {
       name: "mainImage",
       title: "Main image",
@@ -66,13 +66,13 @@ export default {
         hotspot: true
       }
     },
-    // {
-    //   name: "categories",
-    //   title: "Categories",
-    //   type: "array",
-    //   of: [{ type: "reference", to: { type: "category" } }],
-    //   validation: Rule => Rule.required()
-    // },
+    {
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [{ type: "reference", to: { type: "category" } }],
+      validation: Rule => Rule.required()
+    },
     {
       name: "publishedAt",
       title: "Published at",

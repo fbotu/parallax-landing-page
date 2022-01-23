@@ -8,7 +8,7 @@ import client, {
 
 import { groq } from "next-sanity";
 
-export default function Post(props) {
+export default function Postmain(props) {
   const { postdata, preview } = props;
 
   const router = useRouter();
