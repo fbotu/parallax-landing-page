@@ -121,7 +121,7 @@ function Services() {
                     Section 2
                 </h1>   
                 <div className={styles.two}>
-                    <Link href="/posts">
+                    <Link href="/post">
                         <a>See our database</a>
                     </Link>
                     <Link href="/postmain">

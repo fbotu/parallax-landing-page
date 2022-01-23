@@ -9,6 +9,9 @@
     "sanity": "cd studio && sanity start",
     "lint": "next lint"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.23.2",
