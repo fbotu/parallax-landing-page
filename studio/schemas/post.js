@@ -1,8 +1,8 @@
 import { HiOutlineDocumentAdd } from "react-icons/hi";
-
+/* title: "Post", renamed from Posts */
 export default {
   name: "post",
-  title: "Posts",
+  title: "Post",
   icon: HiOutlineDocumentAdd,
   type: "document",
   fields: [
