@@ -1,7 +1,9 @@
 /* Brand Colours */
 $Primary: #800020;
+$Secondary: #555555;
 
 
 :export {
-    primary: $Primary
+    primary: $Primary;
+    secondary: $Secondary
 }

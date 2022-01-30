@@ -1,0 +1,32 @@
+@import '_variables.module.scss';
+
+.post {
+    padding: 1rem 5rem;
+    @extend %flex-box;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.categories {
+    color: $Secondary;
+}
+
+.author {
+    font-size: 1.2rem;
+    color: $Secondary;
+}
+
+.authorImage {
+    padding: 1rem 0;
+}
+
+.body {
+
+    & h1,h2 {
+        padding: 0.5rem 0;
+    }
+
+    & h3 {
+        padding: 0.2rem 0;
+    }
+}

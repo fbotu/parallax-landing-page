@@ -3,6 +3,8 @@ import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
 import client from '../../client'
+/* STYLES */
+import styles from '../../styles/singlePost.module.scss'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -10,7 +12,7 @@ function urlFor (source) {
 
 const Post = ({post}) => {
   if (!post) return null
-  
+
   const {
     title = 'Missing title',
     name = 'Missing name',
@@ -19,28 +21,31 @@ const Post = ({post}) => {
     body = []
   } = post
   return (
-    <article>
-      <h1>{title}</h1>
-      <span>By {name}</span>
+    <article className={styles.post}>
+      <h1 className={styles.title}>{title}</h1>
+      <span className={styles.author}>By {name}</span>
       {categories > 0 ? (
-        <ul>
+        <ul className={styles.categories}>
           Posted in
-          {categories.map(category => <li key={category}>{category}</li>)}
+          {categories.map(category => 
+          <li key={category} className={styles.categories}>{category}</li>)}
         </ul>
-      ) : (<h4>No Categories</h4>)
+      ) : (<h4 className={styles.categories}>No Categories</h4>)
       }
 
       {authorImage ? (
-        <div>
+        <div className={styles.authorImage}>
           <img
             src={urlFor(authorImage)
-              .width(50)
+              .width(150)
+              .height(150)
               .url()}
           />
         </div>
       ) : (<h4>No Image!!!</h4>)
       }
       <BlockContent
+        className={styles.body}
         blocks={body}
         imageOptions={{ w: 320, h: 240, fit: 'max' }}
         {...client.config()}
