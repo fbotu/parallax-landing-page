@@ -20,13 +20,15 @@ const Post = ({post}) => {
     <article>
       <h1>{title}</h1>
       <span>By {name}</span>
-      {categories && (
+      {categories > 0 ? (
         <ul>
           Posted in
           {categories.map(category => <li key={category}>{category}</li>)}
         </ul>
-      )}
-      {authorImage && (
+      ) : (<h4>No Categories</h4>)
+      }
+
+      {authorImage ? (
         <div>
           <img
             src={urlFor(authorImage)
@@ -34,7 +36,8 @@ const Post = ({post}) => {
               .url()}
           />
         </div>
-      )}
+      ) : (<h4>No Image!!!</h4>)
+      }
       <BlockContent
         blocks={body}
         imageOptions={{ w: 320, h: 240, fit: 'max' }}
