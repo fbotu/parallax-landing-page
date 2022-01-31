@@ -1,3 +1,5 @@
+/* COMPONENTS */
+import Link from 'next/link';
 // [slug].js
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
@@ -22,9 +24,14 @@ const Post = ({post}) => {
   } = post
   return (
     <article className={styles.post}>
+      <div  className={styles.backBTN}>
+        <Link href="/post">
+          <a>Back to Posts</a>
+        </Link>
+      </div>
       <h1 className={styles.title}>{title}</h1>
       <span className={styles.author}>By {name}</span>
-      {categories > 0 ? (
+      {categories.length > 0 ? (
         <ul className={styles.categories}>
           Posted in
           {categories.map(category => 
@@ -34,8 +41,9 @@ const Post = ({post}) => {
       }
 
       {authorImage ? (
-        <div className={styles.authorImage}>
+        <div className={styles.authorImageWrapper}>
           <img
+            className={styles.authorImage}
             src={urlFor(authorImage)
               .size(200, 150)
               .url()}

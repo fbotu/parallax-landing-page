@@ -7,8 +7,19 @@
     gap: 0.5rem;
 }
 
+.backBTN {
+    @extend %card-morphism;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
 .categories {
     color: $Secondary;
+    list-style: none;
+    font-size: 1rem;
 }
 
 .author {
@@ -16,11 +27,19 @@
     color: $Secondary;
 }
 
-.authorImage {
+.authorImageWrapper {
     padding: 1rem 0;
 }
 
+.authorImage {
+    border-radius: 20px;
+}
+
 .body {
+
+    @extend %card-morphism;
+    padding: 3rem;
+    border-radius: 1rem;
 
     & h1,h2 {
         padding: 0.5rem 0;
