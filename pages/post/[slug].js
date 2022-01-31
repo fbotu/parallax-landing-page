@@ -37,8 +37,7 @@ const Post = ({post}) => {
         <div className={styles.authorImage}>
           <img
             src={urlFor(authorImage)
-              .width(150)
-              .height(150)
+              .size(200, 150)
               .url()}
           />
         </div>
